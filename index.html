@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Luka Svast</title>
+<title>Manuela Andric</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/png" href="http://freevector.co/wp-content/uploads/2009/05/20079-blank-user-profile1.png"/>
@@ -19,7 +19,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="close_sidenav()" class="w3-hide-large w3-right w3-padding" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAfVAAAAJDg1MjBiMTkxLWFlYzItNGZjOS05YTYzLTFlMGNjNTFkYjIwZQ.jpg" style="width:60%;" class="w3-round"><br><br>
+    <img src="./img/profile.jpg" style="width:60%;" class="w3-round"><br><br>
   </div>
   <a href="#portfolio" onclick="w3_close()" class="w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
   <a href="#about" onclick="w3_close()" class="w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
@@ -36,170 +36,67 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header class="w3-container" id="portfolio">
-    <a href="#"><img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAfVAAAAJDg1MjBiMTkxLWFlYzItNGZjOS05YTYzLTFlMGNjNTFkYjIwZQ.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <a href="#"><img src="./img/profile.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-opennav w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="open_sidenav()"><i class="fa fa-bars"></i></span>
     <h1><b>My Portfolio</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
       <span class="w3-margin-right">Filter:</span>
-      <button class="w3-button w3-white" onclick="all_projects()">All</button>
-      <button class="w3-button w3-white" onclick="show_web_projects()"><i class="fa fa-code w3-margin-right"></i>Web Development</button>
-      <button class="w3-button w3-white" onclick="show_data_projects()"><i class="fa fa-database w3-margin-right"></i>Data Analysis</button>
-      <button class="w3-button w3-white" onclick="show_embedded_projects()"><i class="fa fa-microchip w3-margin-right"></i>Embedded Systems</button>
+      <button class="w3-button w3-white">All</button>
     </div>
   </header>
 
   <!--Projects Grid-->
   <div class="w3-row-padding" style="margin-bottom:32px">
-    <div id="data_analysis_projects">
-      <div class="w3-twothird w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://github.com/lukasvast/speech-signal-segments-classification-using-mfcc"><img src="./img/SpeechClassification.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Speech Signal Segments Classification using Mel-cepstral Coefficients</b></p>
-          <p class="w3-justify">
-            Application program for speech signal segments classification using Mel-cepstral coefficients extraction developed
-            alongside with bachelor's thesis. Resulting application uses speech audio signals and their transcripts from existing
-            database to create a model for pattern recognition and speech segments classification.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="web_development_projects">
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://lukasvast.github.io/projects/WorldTour/"><img src="./img/WorldTour.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>World Tour</b></p>
-          <p>
-            Browse through photos taken from all over the world.
-          </p>
-          <p>
-            Aplication consumes RESTful API. Development still in process..
-          </p>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://lukasvast.github.io/projects/SocialNetwork/"><img src="./img/SocialNetwork.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Social Network</b></p>
-          <p>
-            Minimalistic social netwokr feed page.
-          </p>
-          <p>
-            Application uses Angular2 and Firebase database service. This is just the demo of the chat pannel. Social network development in progress...
-          </p>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://lukasvast.github.io/projects/RocketGame/"><img src="./img/RocketGame.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Rocket Game</b></p>
-          <p>
-            Navigate through asteroid field with your rocket. Shoot the asteroids with your missiles .
-          </p>
-          <p>
-            Web game implemented in HTML5 Canvas. Use up and down arrows to move and space to shoot.
-          </p>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://lukasvast.github.io/projects/ApartmentsJulija/"><img src="./img/HouseJulija.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>House Julija</b></p>
-          <p>
-            Web application that allows users to book a summer holiday apartments.
-          </p>
-          <p>
-            Application uses RESTful API to book reservations. This is just the demo of the front-end functionalities.
-          </p>
-        </div>
-      </div>
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://github.com/lukasvast/rest-api-tython"><img src="./img/Tython.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>RESTful API template</b></p>
-          <p>
-            This is a template for creating RESTful WEB API services.
-          </p>
-          <p>
-            It combines FOSRestBundle with Symfony Guard Security Component to authenticate users via apikey.
-          </p>
-        </div>
-      </div>
-
-      <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://lukasvast.github.io/projects/SearchMovies/"><img src="./img/SearchMovies.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Search Movies</b></p>
-          <p>
-            Search for movie titles.
-          </p>
-          <p>
-            Aplication (Angular2) consumes RESTful API OMDB. Development still in progress..
-          </p>
-        </div>
-      </div>
-    </div>
-    <div id="embedded_systems_projects">
-      <div class="w3-twothird w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://github.com/lukasvast/embedded-riread-system"><img src="./img/RiRead.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>RiRead</b></p>
-          <p class="w3-justify">
-            Embedded application for
-            ATmega32A microcontroller that uses magnetic card reader (SU90) to output content of magnetic cards on TFT LCD display.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 
   <!-- About Me -->
   <div id="about" class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4><b>About Me</b></h4>
     <p class="w3-justify">
-      I am a recent University Bachelor with an interrest for web development and data science. I was born in Croatia in 1993. where I
-      finished my High School and University studies. My mother tongue is Croatian but I am also fluent in English and I hava an advanced
-      knowledge of German. Currently I am living in Munich where I am working as a Software Engineer in a FinTech startup company Tradico GmbH.
+      I am a recent University Graduate with strong engineering knowledge base and work ethics. I was born in Croatia in 1993. where I
+      finished my University studies. My mother tongue is Croatian but I also have knowledge of English and a basic knowledge of German.
+      Currently I am living in Munich where I am studying German language.
     </p>
     <p class="w3-justify">
-    I am ideally looking to work with experienced developers and am eager to start expanding my knowledge through challenging projects from day one.
+    I am ideally looking to work with experienced engineers and am eager to start expanding my knowledge through challenging projects from day one.
     </p>
     <hr>
 
     <div class="w3-container w3-half">
       <h4>Technical Skills</h4>
       <!-- Progress bars / Skills -->
-      <p>Python, Django</p>
+      <p>Construction Engineering, Static Analysis</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:90%">90%</div>
+      </div>
+      <p>AutoCAD</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
       </div>
-      <p>PHP, Symfony</p>
+      <p>STAAD-Pro, MathCAD</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
       </div>
-      <p>Javascript, Angular, HTML, CSS</p>
+      <p>Python</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
-      </div>
-      <p>MySQL, PostgreSQL</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:40%">40%</div>
       </div>
 
     </div>
     <div class="w3-container w3-half">
       <h4>Languages</h4>
       <!-- Progress bars / Skills -->
-      <p>English</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">100%</div>
-      </div>
       <p>Croatian</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">100%</div>
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:100%">native</div>
+      </div>
+      <p>English</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">working proficiency</div>
       </div>
       <p>German</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:60%">60%</div>
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:30%">elementary proficiency</div>
       </div>
     </div>
     <hr>
@@ -209,30 +106,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div id="education" class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4><b>Education</b></h4>
       <p class="w3-justify">
-        The nature of my degree course involved a great deal of independent research, requiring initiative and a wide range of skills.
-        Web Application Development course together with Database course was heavily based on practical projects which contributed to my passion for web development.
-        Courses like Algorithms and Data Structures, Operating Systems and Software Engineering provided me with an understanding of complex algorithms,
-        software development cycles and practices and knowledge of operating systems inner workings.
-      </p>
-      <p class="w3-justify">
-        Collaborative learning was a big part of my university curriculum.
-        Through group projects I was able to refine my own understanding and get new insight from other colleagues while solving problems.
+        With completion of the University Graduate Programme I have aquired the competence for the planning and design of structures.
+        My qualifications allow me to design structures in concrete, timber and steelwork and to take part in planning and designing hydraulic
+        and transportation systems and structures. I am also qualified for independent design of structures, construction management and supervision.
       </p>
       <hr>
       <!-- Uni and Matura -->
-      <h4><b class="w3-quarter">2012 - 2016</b><b class="w3-threequarter">University of Rijeka, Faculty of Engineering</b></h4>
+      <h4><b class="w3-quarter">2015 - 2017</b><b class="w3-threequarter">University of Rijeka, Faculty of Civil Engineering</b></h4>
       </br></br>
-      <b class="w3-quarter">Degree:</b><i class="w3-threequarter">Bachelor's degree in Computer Science</i>
+      <b class="w3-quarter">Degree:</b><i class="w3-threequarter">Masters's degree in Construction Engineering</i>
       </br>
-      <b class="w3-quarter">Bachelors Thesis:</b><i class="w3-threequarter">Speech Signal Segments Classification using Mel-cepstral Coefficients</i>
-      </br>
-      <b class="w3-quarter">Grade Average:</b><i class="w3-threequarter">2.5</i>
+      <b class="w3-quarter">Bachelors Thesis:</b><i class="w3-threequarter">Stability analysis and 2nd order theory on variable stiffness beams</i>
       <hr>
-      <h4><b class="w3-quarter">2008 - 2012</b><b class="w3-threequarter">Dr. Antun Barac Gymnasium</b></h4>
+      <h4><b class="w3-quarter">2012 - 2015</b><b class="w3-threequarter">University of Rijeka, Faculty of Civil Engineering</b></h4>
       </br></br>
-      <b class="w3-quarter">Degree:</b><i class="w3-threequarter">High School/Secondary Diplomas and Certificates</i>
+      <b class="w3-quarter">Degree:</b><i class="w3-threequarter">Bachelor's degree in Civil Engineering</i>
       </br>
-      <b class="w3-quarter">Grade Average:</b><i class="w3-threequarter">2.0</i>
+      <b class="w3-quarter">Bachelors Thesis:</b><i class="w3-threequarter">The analysis of hydraulic parameters during hydraulic (water) jump</i>
+      <hr>
+      <h4><b class="w3-quarter">2008 - 2012</b><b class="w3-threequarter">Technical High School</b></h4>
+      </br></br>
+      <b class="w3-quarter">Degree:</b><i class="w3-threequarter">Architectural Technician</i>
   </div>
 
   <!-- Experience Section -->
@@ -240,21 +134,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h4><b>Work Experience</b></h4>
       <hr>
       <!-- Work Experience -->
-      <h4><b class="w3-quarter">April 2017 - </b><b class="w3-threequarter">Tradico GmbH (Financial Technology)</b></h4>
+      <h4><b class="w3-quarter">July 2015 - August 2015</b><b class="w3-threequarter">Internship at Izgradnja (Construction Company)</b></h4>
       </br></br>
-      <b class="w3-quarter">Position:</b><i class="w3-threequarter">Software Engineer</i>
+      <b class="w3-quarter">Position:</b>Intern<i class="w3-threequarter"></i>
       </br>
-      <b class="w3-quarter">Description:</b><i class="w3-threequarter">Backend Development with Python/Django, PostgreSQL, RESTful API, Amazon Web Service (AWS), Data Analysis.</i>
-      </br></br>
-      <h4><b class="w3-quarter">July 2014 - August 2014</b><b class="w3-threequarter">Internship at HEP (Electrical Power Industry)</b></h4>
-      </br></br>
-      <b class="w3-quarter">Position:</b><i class="w3-threequarter">Database Developer</i>
-      </br>
-      <b class="w3-quarter">Description:</b><i class="w3-threequarter">Data Migration, Database Development.</i>
+      <b class="w3-quarter">Description:</b><i class="w3-threequarter">Placement at a construction company where,
+        alongside experienced Construction Officer, I prepared daily construction reports.</i>
       <hr>
       <p>
         <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-          <a href="./file/LukaSvastResume.pdf" download="LukaSvastResume"><i class="fa fa-download w3-margin-right"></i>Download Resume</a>
+          <a href="./file/ManuelaAndricCV.pdf" download="ManuelaAndricCV"><i class="fa fa-download w3-margin-right"></i>Download Resume</a>
         </button>
       </p>
   </div>
@@ -265,14 +154,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
       <div class="w3-third w3-dark-grey">
         <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>lsvast@gmail.com</p>
+        <p>manuela.andric@gmail.com</p>
       </div>
       <div class="w3-center w3-third w3-dark-grey w3-padding-32">
-        <a href="https://www.linkedin.com/in/luka-svast"><img src="./img/linkedin.png" style="width:70%" class="w3-hover-opacity"></a>
+        <a href="https://www.linkedin.com/in/manuela-andric"><img src="./img/linkedin.png" style="width:70%" class="w3-hover-opacity"></a>
       </div>
       <div class="w3-third w3-dark-grey">
         <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>+385 174-8414703</p>
+        <p>+385 162-5180054</p>
       </div>
     </div>
   </div>
@@ -293,28 +182,6 @@ function open_sidenav() {
 function close_sidenav() {
     document.getElementById("mySidenav").style.display = "none";
     document.getElementById("myOverlay").style.display = "none";
-}
-
-// Script to filter projects
-function show_web_projects() {
-    document.getElementById("web_development_projects").style.display = "block";
-    document.getElementById("data_analysis_projects").style.display = "none";
-    document.getElementById("embedded_systems_projects").style.display = "none";
-}
-function show_data_projects() {
-    document.getElementById("web_development_projects").style.display = "none";
-    document.getElementById("data_analysis_projects").style.display = "block";
-    document.getElementById("embedded_systems_projects").style.display = "none";
-}
-function show_embedded_projects() {
-    document.getElementById("web_development_projects").style.display = "none";
-    document.getElementById("data_analysis_projects").style.display = "none";
-    document.getElementById("embedded_systems_projects").style.display = "block";
-}
-function all_projects() {
-    document.getElementById("web_development_projects").style.display = "block";
-    document.getElementById("data_analysis_projects").style.display = "block";
-    document.getElementById("embedded_systems_projects").style.display = "block";
 }
 </script>
 
