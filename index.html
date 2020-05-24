@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="./js/script.js"></script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 .w3-sidenav a,.w3-sidenav h4 {font-weight:bold}
@@ -50,17 +53,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div class="w3-row-padding" style="margin-bottom:32px">
 
     <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://github.com/manuela-andric/projects/blob/master/Manuela_Andric_Masters_Thesis.pdf" target="_blank"><img src="./img/masters.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Stability analysis and 2nd order theory on variable stiffness beams</b></p>
-          <p>
-            Calculation of variable stiffness beams is explained in theoretical and numerical terms using the Python programming language for a console-based steel beam of varying stiffness.
-            The task was solved using both the differential method and the transfer matrix method.
-            The differential method was used for a linearly varying stiffness beam and the transfer matrix method was used for the beam in which each segment has constant stiffness calculated based on the average segment stiffness.
-            The variable stiffness beam was divided on three, six and twelve segments to determinate the accuracy of the solution by increasing the number of segments.
-            Both methods proved to be reliable with accuracy increase proportional to number of segments/divisions.
-          </p>
-        </div>
+      <img src="./img/hall/hall_3d.png" style="width:100%" onclick="$('#hall').show();" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Project Reinforced Concrete Hall</b></p>
+        <p>
+          Model of a reinforced concrete hall made in Allplan.
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
+      <img src="./img/bridge/bridge_3d.png" style="width:100%" onclick="$('#bridge').show();" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Project Bridge</b></p>
+        <p>
+          Model of a concrete bridge made in Allplan. The bridge has a slab structure.
+        </p>
+      </div>
     </div>
 
     <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
@@ -86,14 +95,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
 
     <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
-        <a href="https://github.com/manuela-andric/projects/blob/master/Project_Apartment_House.pdf" target="_blank"><img src="./img/apartment_house.png" style="width:100%" class="w3-hover-opacity"></a>
-        <div class="w3-container w3-white">
-          <p><b>Project Apartment House</b></p>
-          <p>
-            Structural analysis and project planning for a house with multiple residential units.
-          </p>
-        </div>
-    </div>
+      <a href="https://github.com/manuela-andric/projects/blob/master/Manuela_Andric_Masters_Thesis.pdf" target="_blank"><img src="./img/masters.png" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>Stability analysis and 2nd order theory on variable stiffness beams</b></p>
+        <p>
+          Calculation of variable stiffness beams is explained in theoretical and numerical terms using the Python programming language for a console-based steel beam of varying stiffness.
+          The task was solved using both the differential method and the transfer matrix method.
+          The differential method was used for a linearly varying stiffness beam and the transfer matrix method was used for the beam in which each segment has constant stiffness calculated based on the average segment stiffness.
+          The variable stiffness beam was divided on three, six and twelve segments to determinate the accuracy of the solution by increasing the number of segments.
+          Both methods proved to be reliable with accuracy increase proportional to number of segments/divisions.
+        </p>
+      </div>
+  </div>
 
     <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
         <a href="https://github.com/manuela-andric/projects/blob/master/Project_Family_House.pdf" target="_blank"><img src="./img/family_house.png" style="width:100%" class="w3-hover-opacity"></a>
@@ -105,6 +118,69 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
         </div>
     </div>
 
+    <div class="w3-third w3-container w3-margin-bottom w3-animate-right">
+      <a href="https://github.com/manuela-andric/projects/blob/master/Project_Apartment_House.pdf" target="_blank"><img src="./img/apartment_house.png" style="width:100%" class="w3-hover-opacity"></a>
+      <div class="w3-container w3-white">
+        <p><b>Project Apartment House</b></p>
+        <p>
+          Structural analysis and project planning for a house with multiple residential units.
+        </p>
+      </div>
+  </div>
+
+  </div>
+  <!-- Modals -->
+  <div ng-controller="galleryCtrl">
+    <!-- Bridge -->
+    <div id="bridge" class="w3-modal w3-white">
+      <span class="w3-closebtn w3-red w3-hover-grey w3-container w3-padding w3-display-topright" onclick="$('#bridge').hide();">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img class="bridge_slide" src="./img/bridge/bridge_3d.png" style="width:100%">
+        <img class="bridge_slide" src="./img/bridge/bridge_plan.png" style="width:100%;display:none">
+        <img class="bridge_slide" src="./img/bridge/bridge_side_view.png" style="width:100%;display:none">
+  
+        <div class="w3-row-padding w3-section">
+          <div class="w3-col s2">
+            <img class="bridge_demo w3-opacity w3-hover-opacity-off" src="./img/bridge/bridge_3d.png" style="width:100%;cursor:pointer" onclick="currentDiv(1,'bridge_slide', 'bridge_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="bridge_demo w3-opacity w3-hover-opacity-off" src="./img/bridge/bridge_plan.png" style="width:100%;cursor:pointer" onclick="currentDiv(2,'bridge_slide', 'bridge_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="bridge_demo w3-opacity w3-hover-opacity-off" src="./img/bridge/bridge_side_view.png" style="width:100%;cursor:pointer" onclick="currentDiv(3,'bridge_slide', 'bridge_demo')">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hall -->
+    <div id="hall" class="w3-modal w3-white">
+      <span class="w3-closebtn w3-red w3-hover-grey w3-container w3-padding w3-display-topright" onclick="$('#hall').hide();">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img class="hall_slide" src="./img/hall/hall_3d.png" style="width:100%">
+        <img class="hall_slide" src="./img/hall/hall_plan0.png" style="width:100%;display:none">
+        <img class="hall_slide" src="./img/hall/hall_plan1.png" style="width:100%;display:none">
+        <img class="hall_slide" src="./img/hall/hall_plan2.png" style="width:100%;display:none">
+        <img class="hall_slide" src="./img/hall/hall_section_view.png" style="width:100%;display:none">
+  
+        <div class="w3-row-padding w3-section">
+          <div class="w3-col s2">
+            <img class="hall_demo w3-opacity w3-hover-opacity-off" src="./img/hall/hall_3d.png" style="width:100%;cursor:pointer" onclick="currentDiv(1,'hall_slide', 'hall_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="hall_demo w3-opacity w3-hover-opacity-off" src="./img/hall/hall_plan0.png" style="width:100%;cursor:pointer" onclick="currentDiv(2,'hall_slide', 'hall_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="hall_demo w3-opacity w3-hover-opacity-off" src="./img/hall/hall_plan1.png" style="width:100%;cursor:pointer" onclick="currentDiv(3,'hall_slide', 'hall_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="hall_demo w3-opacity w3-hover-opacity-off" src="./img/hall/hall_plan2.png" style="width:100%;cursor:pointer" onclick="currentDiv(4,'hall_slide', 'hall_demo')">
+          </div>
+          <div class="w3-col s2">
+            <img class="hall_demo w3-opacity w3-hover-opacity-off" src="./img/hall/hall_section_view.png" style="width:100%;cursor:pointer" onclick="currentDiv(5,'hall_slide', 'hall_demo')">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- About Me -->
@@ -132,11 +208,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
       </div>
-      <p>STAAD-Pro, MathCAD</p>
+      <p>STAAD-Pro, MathCAD, Allplan</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
       </div>
-      <p>Python</p>
+      <p>Python, HTML, CSS</p>
       <div class="w3-grey">
         <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:30%">30%</div>
       </div>
@@ -151,11 +227,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       </div>
       <p>English</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">working proficiency</div>
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">working proficiency (C1)</div>
       </div>
       <p>German</p>
       <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">working proficiency</div>
+        <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:75%">working proficiency (B2)</div>
       </div>
     </div>
 
@@ -193,10 +269,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <div id="experience" class="w3-container w3-padding-large" style="margin-bottom:32px">
     <h4><b>Work Experience</b></h4>
       <hr>
-      <!-- Work Experience -->
+      <!-- ilp2 -->
+      <h4><b class="w3-quarter">May 2020 - </b><b class="w3-threequarter">ilp² Ingenieure GmbH & Co. KG</b></h4>
+      </br></br>
+      <b class="w3-quarter">Position:</b>Konstrukteurin im konstruktiven Ingenieurbau<i class="w3-threequarter"></i>
+      </br>
+      <b class="w3-quarter">Description:</b><i class="w3-threequarter">Using BIM technology to desing bridges.</i>
+      </br></br>
+      <!-- Internship -->
       <h4><b class="w3-quarter">July 2015 - August 2015</b><b class="w3-threequarter">Internship at Izgradnja (Construction Company)</b></h4>
       </br></br>
-      <b class="w3-quarter">Position:</b>Intern<i class="w3-threequarter"></i>
+      <b class="w3-quarter">Position:</b>Student Internship<i class="w3-threequarter"></i>
       </br>
       <b class="w3-quarter">Description:</b><i class="w3-threequarter">Placement at a construction company where,
         alongside experienced Construction Officer, I prepared construction reports.</i>
